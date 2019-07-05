@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?7thcn2");
+  src: url("../fonts/icomoon.eot?7thcn2#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?7thcn2") format("truetype"), url("../fonts/icomoon.woff?7thcn2") format("woff"), url("../fonts/icomoon.svg?7thcn2#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-search:before {
+  content: "\e900"; }
+
+.icon-close:before {
+  content: "\e901"; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+.wrapper {
+  padding: 20px 0; }
+
+@media (min-width: 756px) {
+  .select-language {
+    width: 200px; } }
+
+.form-group {
+  position: relative; }
+
+.drop-country-holder {
+  padding: 40px 50px;
+  border-radius: 4px;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  overflow: auto;
+  height: 300px;
+  background-color: #9dadc7;
+  -webkit-transition: 0.5s opacity ease-in-out;
+  transition: 0.5s opacity ease-in-out; }
+  .drop-country-holder.show {
+    opacity: 1; }
+  .drop-country-holder ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  .drop-country-holder li {
+    -webkit-transition: 0.5s background-color ease-in-out;
+    transition: 0.5s background-color ease-in-out; }
+    @media (min-width: 756px) {
+      .drop-country-holder li {
+        width: 33.33%; } }
+    .drop-country-holder li:hover {
+      cursor: pointer;
+      background-color: #7d92b4; }
+  .drop-country-holder .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 20px;
+    -webkit-transition: 0.5s opacity ease-in-out;
+    transition: 0.5s opacity ease-in-out; }
+    .drop-country-holder .close:hover {
+      cursor: pointer; }
+
+#selected-country {
+  margin-bottom: 20px; }
+  @media (min-width: 756px) {
+    #selected-country {
+      margin-bottom: 0; } }
+
+.icon-search {
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  font-size: 20px;
+  right: 10px; }
+
+.icon-close {
+  opacity: 1; }
+
+.input-holder {
+  position: relative; }
+  .input-holder .icon-close {
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    font-size: 15px;
+    color: #000;
+    display: none; }
+
+body {
+  min-width: 320px; }
+/*# sourceMappingURL=main.css.map */
