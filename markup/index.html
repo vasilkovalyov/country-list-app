@@ -2,57 +2,61 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Country Filter Application</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"
-		defer></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
-		defer></script>
-	<script src="js/script.js" type="module" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Country Filter Application</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js" defer><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+    <script src="js/script.js" type="module" defer></script>
 </head>
 
 <body>
-	<div id="wrapper" class="wrapper">
-		<div class="container">
-			<div class="caption text-center mb-5">
-				<h1>Country filter application</h1>
-			</div>
-			<div class="row flex-wrap">
-				<div class="col d-md-flex align-items-end justify-content-between mb-4	">
-					<div class="form-group m-0">
-						<label for="selected-country">Selected country</label>
-						<div class="input-holder">
-							<input type="text" class="form-control" id="selected-country" readonly>
-						</div>
-					</div>
-					<select class="select-language form-control m-0">
+    <div id="wrapper" class="wrapper">
+        <div class="container">
+            <div class="caption text-center mb-5">
+                <h1>Country filter application</h1>
+            </div>
+            <div class="row flex-wrap">
+                <div class="col d-md-flex align-items-end justify-content-between mb-4	">
+                    <div class="form-group mb-4 mb-md-0">
+                        <label for="selected-country">Selected country</label>
+                        <div class="input-holder">
+                            <input type="text" class="form-control" id="selected-country" readonly>
+                        </div>
+                        <label for="selected-country">Selected country code</label>
+                        <div class="input-holder">
+                            <input type="text" class="form-control" id="selected-country-code" readonly>
+                        </div>
+                    </div>
+                    <select class="select-language form-control m-0">
 						<option value="ru">Russian</option>
 						<option value="en">English</option>
 					</select>
-				</div>
-				<div class="col-12">
-					<div class="form-group ">
-						<label for="input-country">Input country</label>
-						<div class="input-holder">
-							<input type="text" class="form-control" id="input-country">
-							<span class="icon-search"></span>
-							<span class="close icon-close"></span>
-						</div>
-						<div class="drop-country-holder text-white">
-							<ul class="row d-block d-md-flex flex-wrap text-center"></ul>
-							<span class="close icon-close"></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="input-country">Input country</label>
+                        <div class="input-holder input-country-holder">
+                            <input type="text" class="form-control" id="input-country">
+                            <span class="icon-search"></span>
+                            <span class="close icon-close"></span>
+                        </div>
+                        <div class="drop-country-holder text-white">
+                            <ul class="row d-block d-md-flex flex-wrap text-center"></ul>
+                            <span class="close icon-close"></span>
+                            <div class="error-msg">Country <span class="search-country"></span> not found, please enter again</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

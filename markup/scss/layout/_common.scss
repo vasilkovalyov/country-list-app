@@ -1,20 +1,18 @@
-.wrapper{
+.wrapper {
     padding: 20px 0;
 }
 
-.select-language{
+.select-language {
     @media (min-width: 756px) {
         width: 200px;
     }
 }
 
-.form-group{
+.form-group {
     position: relative;
 }
 
-
-
-.drop-country-holder{
+.drop-country-holder {
     padding: 40px 50px;
     border-radius: 4px;
     position: absolute;
@@ -22,60 +20,60 @@
     left: 0;
     width: 100%;
     opacity: 0;
-    overflow: auto;
+    overflow-y: auto;
     height: 300px;
-
     background-color: #9dadc7;
-
     transition: 0.5s opacity ease-in-out;
-
-    &.show{
+    &.show {
         opacity: 1;
     }
-
-    ul{
+    &.country-error {
+        .error-msg {
+            opacity: 1;
+            top: 50%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+    ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
     }
-
-    li{
+    li {
         transition: 0.5s background-color ease-in-out;
-        
-        @media (min-width: 756px){
-             width: 33.33%;
+        @media (min-width: 756px) {
+            width: 33.33%;
         }
-
-        &:hover{
+        &.active-country {
+            background-color: darken(#9dadc7, 10%);
+        }
+        &:hover {
             cursor: pointer;
-            background-color: darken(#9dadc7,10%);
+            background-color: darken(#9dadc7, 10%);
         }
     }
-
-    .close{
+    .close {
         position: absolute;
         top: 15px;
         right: 15px;
         color: $white;
         font-size: 20px;
-
         transition: 0.5s opacity ease-in-out;
-
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }
 }
 
-#selected-country{
+#selected-country {
     margin-bottom: 20px;
-    
     @media (min-width: 756px) {
         margin-bottom: 0;
     }
 }
 
-.icon-search{
+.icon-search {
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
@@ -83,14 +81,13 @@
     right: 10px;
 }
 
-.icon-close{
+.icon-close {
     opacity: 1;
 }
 
-.input-holder{
+.input-holder {
     position: relative;
-
-    .icon-close{
+    .icon-close {
         transform: translateY(-50%);
         position: absolute;
         top: 50%;
@@ -98,5 +95,26 @@
         font-size: 15px;
         color: $black;
         display: none;
+        &:hover {
+            cursor: pointer;
+        }
     }
+    &.active-input {
+        .icon-close {
+            display: block;
+        }
+    }
+}
+
+.error-msg {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    font-size: 20px;
+    color: red;
+    width: 350px;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s top, opacity, transform ease-in-out;
 }
